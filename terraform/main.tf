@@ -61,7 +61,7 @@ resource "aws_cloudwatch_log_group" "handcarry" {
  * Create task definition template
  */
 data "template_file" "task_def_web" {
-  template = "${file("${path.module}/task-def-web.json")}"
+  template = "${file("${path.module}/task-def.json")}"
 
   vars {
     cpu               = "${var.web-cpu}"
