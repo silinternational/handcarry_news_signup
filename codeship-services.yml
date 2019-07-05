@@ -3,17 +3,17 @@ app:
     image: 369020531563.dkr.ecr.us-east-1.amazonaws.com/handcarry_news_signup
     dockerfile_path: ./Dockerfile
   cached: true
-  encrypted_env_file: codeship.env.encrypted
+  encrypted_env_file: .env.encrypted
   working_dir: /go/src/handcarry_news_signup
   command: go test ./...
 
 ecsdeploy:
   image: silintl/ecs-deploy:latest
-  encrypted_env_file: aws.env.encrypted
+  encrypted_env_file: .env.encrypted
 
 aws_generator:
   image: codeship/aws-ecr-dockercfg-generator
-  encrypted_env_file: aws.env.encrypted
+  encrypted_env_file: .env.encrypted
   add_docker: true
 
 tracker:
