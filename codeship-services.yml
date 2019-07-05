@@ -5,7 +5,7 @@ app:
   cached: true
   encrypted_env_file: .env.encrypted
   working_dir: /go/src/handcarry_news_signup
-  command: go test ./...
+  command: true
 
 ecsdeploy:
   image: silintl/ecs-deploy:latest
