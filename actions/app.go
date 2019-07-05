@@ -39,7 +39,7 @@ func App() *buffalo.App {
 		})
 
 		// Automatically redirect to SSL
-		app.Use(forceSSL())
+		// app.Use(forceSSL())
 
 		// Log request parameters (filters apply).
 		app.Use(paramlogger.ParameterLogger)
@@ -52,6 +52,7 @@ func App() *buffalo.App {
 		app.Use(translations())
 
 		app.GET("/", HomeHandler)
+		app.POST("/", SubscribeHandler)
 
 		app.ServeFiles("/", assetsBox) // serve files from the public directory
 	}
