@@ -1,6 +1,6 @@
 app:
   build:
-    image: 369020531563.dkr.ecr.us-east-1.amazonaws.com/handcarry_news_signup
+    image: 369020531563.dkr.ecr.us-east-1.amazonaws.com/handcarry-news-signup
     dockerfile_path: ./Dockerfile
   cached: true
   encrypted_env_file: .env.encrypted
