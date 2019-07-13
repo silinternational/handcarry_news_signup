@@ -1,23 +1,90 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143297978-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-143297978-1');
+    </script>
+
+    <title>HandCarry - Coming Soon</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="utf-8">
-    <title>Buffalo - Handcarry News Signup</title>
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <%= stylesheetTag("buffalo.css") %>
-    <%= stylesheetTag("application.css") %>
-    <meta name="csrf-param" content="authenticity_token" />
-    <meta name="csrf-token" content="<%= authenticity_token %>" />
-    <link rel="icon" href="<%= assetPath("images/favicon.ico") %>">
-  </head>
-  <body>
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--===============================================================================================-->
+</head>
+<body>
 
-    <div class="container">
-      <%= partial("flash.html") %>
+
+
+<div class="flex-w flex-str size1 overlay1">
       <%= yield %>
-    </div>
+</div>
 
-    <%= javascriptTag("application.js") %>
-  </body>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="privacyPolicy">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Privacy Policy</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <strong>No SPAM!</strong> We will only use your email address to send you news about
+                HandCarry. You can unsubscribe at any time by clicking the link in any email from us.
+                <p class="p-t-15">
+                    This website uses Google Analytics to help us understand how visitors interact with the website, but we do NOT use it to track, collect or send to Google any data that personally identifies an individual. For more information on how Google Analytics collects and processes data, see "How Google uses data when you use our partners' sites or apps" https://www.google.com/policies/privacy/partners/.
+                </p>
+                <p class="p-t-15">
+                    Other than any cookies used by Google Analytics (which we cannot see) and the session cookie automatically used by your browser to allow you to login (if applicable), this website does not use cookies to collect any data about you.
+                </p>
+                <p class="p-t-15">
+                    While we may provide links to other websites, please be aware that we are not responsible for the content or privacy practices of third-party websites.
+                </p>
+                <p class="p-t-15">
+                    This Privacy Policy may change, in which case an updated version will be posted here. If you feel that we are not abiding by this privacy policy, please contact us.
+                </p>
+                <p class="p-t-15">Questions: <a href="mailto:support@handcarry.app">support@handcarry.app</a></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--===============================================================================================-->
+<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/bootstrap/js/popper.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/tilt/tilt.jquery.min.js"></script>
+<!--===============================================================================================-->
+<script src="js/main.js"></script>
+
+</body>
 </html>
