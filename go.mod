@@ -1,4 +1,4 @@
-module handcarry_news_signup
+module wecarry_news_signup
 
 go 1.12
 

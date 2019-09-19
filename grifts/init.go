@@ -1,7 +1,7 @@
 package grifts
 
 import (
-	"handcarry_news_signup/actions"
+	"wecarry_news_signup/actions"
 
 	"github.com/gobuffalo/buffalo"
 )

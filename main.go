@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"handcarry_news_signup/actions"
+	"wecarry_news_signup/actions"
 )
 
 // main is the starting point for your Buffalo application.
