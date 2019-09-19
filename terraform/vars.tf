@@ -3,7 +3,7 @@ variable "aws_region" {
 }
 
 variable "app_name" {
-  default = "handcarry-news-signup"
+  default = "wecarry-news-signup"
 }
 
 variable "web-memory" {
