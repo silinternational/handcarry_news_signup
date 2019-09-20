@@ -47,7 +47,7 @@ resource "aws_alb_listener_rule" "tg" {
   }
 }
 
-resource "aws_cloudwatch_log_group" "handcarry" {
+resource "aws_cloudwatch_log_group" "wecarry" {
   name              = "${var.app_name}-${data.terraform_remote_state.common.app_env}"
   retention_in_days = 14
 
@@ -68,7 +68,7 @@ data "template_file" "task_def_web" {
     memory            = "${var.web-memory}"
     docker_image      = "${module.ecr.repo_url}"
     docker_tag        = "${var.docker_tag}"
-    log_group         = "${aws_cloudwatch_log_group.handcarry.name}"
+    log_group         = "${aws_cloudwatch_log_group.wecarry.name}"
     region            = "${var.aws_region}"
     log_stream_prefix = "${var.app_name}-${data.terraform_remote_state.common.app_env}"
     SENDGRID_API_KEY  = "${var.SENDGRID_API_KEY}"

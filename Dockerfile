@@ -2,8 +2,8 @@
 # https://docs.docker.com/engine/userguide/eng-image/multistage-build/
 FROM gobuffalo/buffalo:v0.14.6 as builder
 
-RUN mkdir -p $GOPATH/src/handcarry_news_signup
-WORKDIR $GOPATH/src/handcarry_news_signup
+RUN mkdir -p $GOPATH/src/wecarry_news_signup
+WORKDIR $GOPATH/src/wecarry_news_signup
 
 ADD . .
 ENV GO111MODULES=on

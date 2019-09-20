@@ -1,5 +1,5 @@
-name = "handcarry-news-signup"
-bin = "bin/handcarry-news-signup"
+name = "wecarry-news-signup"
+bin = "bin/wecarry-news-signup"
 vcs = "git"
 with_pop = false
 with_sqlite = false
